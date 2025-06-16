@@ -1,0 +1,110 @@
+/* --- FADE IN / OUT --- */
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.fade-out {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.delay-0 { transition-delay: 0s; }
+.delay-1 { transition-delay: 0.3s; }
+.delay-2 { transition-delay: 0.6s; }
+
+/* --- MAIN VERTICAL CONTAINER --- */
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  padding: 60px 20px;
+  align-items: center;
+}
+
+/* --- HORIZONTAL ROW (รูป+กล่องข้อมูล) --- */
+.profile-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* --- Reverse ด้านซ้าย-ขวา --- */
+.profile-row.reverse {
+  flex-direction: row-reverse;
+}
+
+/* --- BOX INFO --- */
+.profile-box {
+  flex: 1 1 300px;
+  max-width: 600px;
+  background: rgb(0, 0, 0);
+  padding: 24px;
+  border-radius: 16px;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  font-size: 1.3rem;
+}
+
+.profile-box h2 {
+  margin-bottom: 20px;
+  border-bottom: 2px solid gray;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.profile-box p {
+  margin: 25px 0;
+}
+
+.profile-box p:first-of-type {
+  margin-top: 30px;
+}
+
+/* --- IMAGE --- */
+.profile-pic {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .profile-row,
+  .profile-row.reverse {
+    flex-direction: column !important;
+    gap: 40px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-pic {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    border-radius: 16px;
+  }
+
+  .profile-box {
+    width: 90%;
+    padding: 20px;
+    font-size: 1.1rem;
+  }
+
+  .profile-box h2 {
+    font-size: 1.5rem;
+    padding-bottom: 16px;
+  }
+
+  .profile-box p {
+    font-size: 1.1rem;
+    margin: 20px 0;
+  }
+}
