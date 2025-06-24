@@ -1,0 +1,65 @@
+/* --- Profile Container --- */
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  padding: 60px 20px;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* --- Row Layout --- */
+.profile-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.profile-row.reverse {
+  flex-direction: row-reverse;
+}
+
+/* --- Profile Box --- */
+.profile-box {
+  flex: 1 1 300px;
+  max-width: 600px;
+  width: 100%;
+  background: #000;
+  padding: 24px;
+  border-radius: 16px;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  font-size: 1.3rem;
+  box-sizing: border-box;
+}
+
+.profile-box h2 {
+  margin-bottom: 20px;
+  border-bottom: 2px solid gray;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.profile-box p {
+  margin: 25px 0;
+}
+
+.profile-box p:first-of-type {
+  margin-top: 30px;
+}
+
+/* --- Profile Image --- */
+.profile-pic {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}

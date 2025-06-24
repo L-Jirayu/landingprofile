@@ -81,7 +81,8 @@
 
 /* --- รูปภาพขนาดเท่ากัน --- */
 .profile-image {
-  margin-top: 20px;
+  display: block;
+  margin: 20px auto 0 auto;
   width: 100%;
   max-width: 280px;
   height: 200px;

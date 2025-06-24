@@ -1,0 +1,65 @@
+/* === Responsive for Mobile === */
+@media (max-width: 580px) {
+  .structure-container,
+  .structure-wrapper,
+  .profile-container,
+  .profile-row {
+    padding-left: 8px;
+    padding-right: 8px;
+    box-sizing: border-box;
+  }
+
+  .structure-wrapper {
+    gap: 20px;
+  }
+
+  .profile-box,
+  .structure-text,
+  .structure-image,
+  .black-box-single {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .profile-pic,
+  .profile-img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .structure-text h1 {
+    font-size: 1.3rem;
+  }
+
+  .structure-text h2 {
+    font-size: 1rem;
+  }
+
+  .structure-text h3 {
+    font-size: 0.8rem;
+  }
+
+  .structure-icons {
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .profile-box {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .profile-box {
+    font-size: 0.95rem;
+  }
+  .structure-text h1 {
+    font-size: 1.1rem;
+  }
+  .structure-text h2 {
+    font-size: 0.9rem;
+  }
+  .structure-text h3 {
+    font-size: 0.75rem;
+  }
+}

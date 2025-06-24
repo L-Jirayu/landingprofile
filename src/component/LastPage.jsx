@@ -1,5 +1,4 @@
 import React from 'react'
-import './interface.css';
 
 function LastPage() {
   return (
