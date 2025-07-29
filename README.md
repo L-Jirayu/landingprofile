@@ -9,7 +9,7 @@ For study about HTML, CSS and Javascript with Javascript Library to have name is
 
 1.install NodeJS: https://nodejs.org/en/download/current</br>
 2.use git for clone</br>
-3.npm install and npm run dev</br>
+3.**npm install** and **npm run dev**</br>
 
 -----------------------------------------------------------------------------------------------------</br>
 
