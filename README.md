@@ -1,7 +1,13 @@
 # Landing Page Profile
 ## Concept
 
-For study about HTML, CSS and Javascript with Javascript Library to have name is React</br>
+For study about HTML, CSS and Javascript and using JSX for combine between HTML and Javascript syntax</br>
+
+-----------------------------------------------------------------------------------------------------</br>
+
+## Tools
+
+Javascript Library to have name is **React**</br>
 
 -----------------------------------------------------------------------------------------------------</br>
 
