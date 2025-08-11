@@ -8,5 +8,6 @@ export default defineConfig({
   server: {
     host: true,
     allowedHosts: ['.ngrok-free.app']
-  }
+  },
+  base: process.env.VITE_BASE_PATH || '/landingprofile',
 })
