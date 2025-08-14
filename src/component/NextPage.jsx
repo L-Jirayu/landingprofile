@@ -28,9 +28,9 @@ function NextPage() {
         <div className="profile-box">
           <h2>About Me</h2>
           <p><b>Name:</b> Mr. Jirayu Langphee</p>
+          <p><b>Nickname:</b> Guy</p>
           <p><b>MBTI:</b> INFJ-T</p>
-          <p><b>Position:</b> Full Stack Web Developer Internship</p>
-          <p><b>Work Place:</b> CTM-IT</p>
+          <p><b>Location:</b> Samut Sakhon province</p>
         </div>
       </div>
 
