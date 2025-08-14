@@ -30,7 +30,7 @@ function NextPage() {
           <p><b>Name:</b> Mr. Jirayu Langphee</p>
           <p><b>Nickname:</b> Guy</p>
           <p><b>MBTI:</b> INFJ-T</p>
-          <p><b>Location:</b> Samut Sakhon province</p>
+          <p><b>Address:</b> Samut Sakhon, Thailand</p>
         </div>
       </div>
 
