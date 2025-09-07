@@ -1,42 +1,11 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import './fadesidestep.css';
 
 function ProfileList() {
-  const containerRef = useRef(null);
-  const [fadeTopLeft, setFadeTopLeft] = useState('fade-out-left');
-  const [fadeTopCenter, setFadeTopCenter] = useState('fade-out-center');
-  const [fadeTopRight, setFadeTopRight] = useState('fade-out-right');
-  const [fadeBottomLeft, setFadeBottomLeft] = useState('fade-out-late-left');
-  const [fadeBottomRight, setFadeBottomRight] = useState('fade-out-late-right');
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setFadeTopLeft('fade-in-left');
-          setTimeout(() => setFadeTopCenter('fade-in-center'), 300);
-          setTimeout(() => setFadeTopRight('fade-in-right'), 600);
-          setTimeout(() => setFadeBottomLeft('fade-in-late-left'), 900);
-          setTimeout(() => setFadeBottomRight('fade-in-late-right'), 1200);
-        } else {
-          setFadeBottomRight('fade-out-late-right');
-          setTimeout(() => setFadeBottomLeft('fade-out-late-left'), 300);
-          setTimeout(() => setFadeTopRight('fade-out-right'), 600);
-          setTimeout(() => setFadeTopCenter('fade-out-center'), 900);
-          setTimeout(() => setFadeTopLeft('fade-out-left'), 1200);
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    if (containerRef.current) observer.observe(containerRef.current);
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <div ref={containerRef} className="profile-list-container page-gray" style={{ marginTop: '100px' }}>
+    <div className="profile-list-container page-gray" style={{ marginTop: '100px' }}>
       {/* กลุ่มบน */}
-      <div className={`profile-section left ${fadeTopLeft}`}>
+      <div className="profile-section left">
         <h2>Other Skill</h2>
         <p><b>Study: </b>Everything about Algebra Calculation</p>
         <p><b>Motocycle: </b>Basic service ex. engine oil change</p>
@@ -48,11 +17,11 @@ function ProfileList() {
         />
       </div>
 
-      <div className={`profile-section center ${fadeTopCenter}`}>
+      <div className="profile-section center">
         <h2>About Interest</h2>
         <p><b>Knownledge: </b>Web Development</p>
-        <p><b>Recovery: </b>Playing Sport ex running swimming</p>
-        <p><b>See around: </b>Watching News</p>
+        <p><b>Recovery: </b>Playing Sport ex, running and swimming</p>
+        <p><b>See around: </b>Watching news</p>
         <img
           src="https://www.bankrate.com/2022/02/31124942/Deposits_What_is_interest.jpg?auto=webp&optimize=high&crop=16:9"
           alt="Interest"
@@ -60,11 +29,11 @@ function ProfileList() {
         />
       </div>
 
-      <div className={`profile-section right ${fadeTopRight}`}>
+      <div className="profile-section right">
         <h2>Learning Experience</h2>
         <p><b>Programming Language: </b>C, Python</p>
-        <p><b>BackEnd: </b>MySQL, ASP .Net MVC</p>
-        <p><b>Computer Knowledge: </b>Computer Architecture, Data Structure and Algorithm</p>
+        <p><b>Backend: </b>MySQL, ASP .Net MVC</p>
+        <p><b>Computer Knowledge: </b>Data Structure and Algorithm, Introduction of Software Engineering</p>
         <img
           src="https://res.cloudinary.com/emg-prod/image/upload/f_auto,q_auto/v1/htmlpages/htmlpage22655/computerskillsopengraph.jpg"
           alt="ComSkill"
@@ -74,7 +43,7 @@ function ProfileList() {
 
       {/* กลุ่มล่าง */}
       <div className="bottom-row">
-        <div className={`black-box-single profile-section ${fadeBottomLeft}`}>
+        <div className="black-box-single profile-section">
           <h2>Education Historical</h2>
           <p><b>Major: </b>Computer Engineering</p>
           <p><b>Department: </b>Electrical Technology Education</p>
@@ -86,11 +55,11 @@ function ProfileList() {
           />
         </div>
 
-        <div className={`black-box-single profile-section ${fadeBottomRight}`}>
+        <div className="black-box-single profile-section">
           <h2>Web Development Skill</h2>
-          <p><b>Language: </b>HTML, CSS, JavaScript</p>
-          <p><b>FrontEnd: </b>React</p>
-          <p><b>BackEnd: </b>NestJS Postman MongoDB</p>
+          <p><b>Language: </b>HTML, CSS and JavaScript</p>
+          <p><b>Frontend: </b>React</p>
+          <p><b>Backend: </b>NestJS, Postman and MongoDB</p>
           <img
             src="https://media.licdn.com/dms/image/v2/D5612AQFMxThwQn7HZg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1697274440798?e=2147483647&v=beta&t=QLEHZgio8uRKebsNCrjEdh3rOvVmSUa7dSYgzCPBxBo"
             alt="WebCoding"
@@ -103,4 +72,3 @@ function ProfileList() {
 }
 
 export default ProfileList;
-

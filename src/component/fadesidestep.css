@@ -1,22 +1,28 @@
+/* ============ Layout หลัก ============ */
 .profile-list-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
   height: auto;
-  padding: 0 50px;
+  padding-inline: clamp(16px, 5vw, 50px); /* เดิม: 0 50px */
   background-color: black;
   color: white;
   flex-wrap: wrap;
   gap: 40px;
   margin-bottom: 80px;
+  box-sizing: border-box;
 }
 
+/* ใช้ flex-basis/auto แทนการล็อก width:30% เพื่อยืด-หดและ wrap ได้ดีขึ้น */
 .profile-section {
-  width: 30%;
+  width: auto;                 /* เดิม: 30% */
+  flex: 1 1 320px;             /* กว้างพื้นฐาน ~320px แล้วค่อยยืด */
+  max-width: 420px;            /* ไม่ให้กว้างเกินต่อใบ */
   text-align: center;
-  opacity: 0;
-  transform: translateX(50px);
-  transition: opacity 1s ease, transform 1s ease;
+  opacity: 1;
+  transform: none;
+  transition: none;
+
   font-size: 1.2rem;
   line-height: 1.8;
   color: white;
@@ -24,6 +30,7 @@
   border-radius: 12px;
   padding: 0;
   box-shadow: none;
+  box-sizing: border-box;
 }
 
 .profile-section h2 {
@@ -52,15 +59,16 @@
   color: white;
 }
 
-/* --- กล่องดำล่าง กว้างเต็ม --- */
+/* ============ แถวล่าง (Bottom Row) ============ */
 .bottom-row {
   width: 100%;
   margin: 60px auto 0 auto;
   display: flex;
   justify-content: center;
-  gap: 120px;
+  align-items: stretch;
+  flex-wrap: wrap;                         /* สำคัญ: ให้ขึ้นบรรทัดใหม่ได้ */
+  gap: clamp(24px, 6vw, 120px);            /* ลด/เพิ่มช่องไฟอัตโนมัติ */
 }
-
 
 .black-box-single {
   background-color: #000;
@@ -68,29 +76,29 @@
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.8);
   color: white;
-
-  opacity: 0;
-  transform: translateX(50px);
-  transition: opacity 1s ease, transform 1s ease;
+  opacity: 1;
+  transform: none;
+  transition: none;
 
   text-align: center;
 
   width: 100%;
-  max-width: 500px;
+  flex: 1 1 380px;          /* ~สองใบต่อแถวเมื่อพื้นที่พอ */
+  max-width: 560px;         /* ไม่ให้กว้างเกินไป */
+  box-sizing: border-box;
 }
 
-/* --- รูปภาพขนาดเท่ากัน --- */
+/* ============ รูปภาพ ============ */
 .profile-image {
   display: block;
   margin: 20px auto 0 auto;
-  width: 100%;
-  max-width: 280px;
-  height: 200px;
+  width: min(100%, 280px);   /* กันล้นบนจอเล็ก */
+  height: auto;
   aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease; /* hover เฉพาะรูป */
   background-color: #333;
 }
 
@@ -98,49 +106,22 @@
   transform: scale(1.05);
 }
 
-/* --- FADE IN/OUT --- */
-.fade-in-left,
-.fade-in-center,
-.fade-in-right,
-.fade-in-late-left,
-.fade-in-late-right {
-  opacity: 1;
-  transform: translateX(0);
+/* ============ Breakpoints ============ */
+/* เริ่มบีบ max-width ของการ์ดลงเล็กน้อยในจอกว้างกลาง */
+@media (max-width: 1280px) {
+  .profile-section { max-width: 480px; }
 }
 
-.fade-in-left { transition-delay: 0s; }
-.fade-in-center { transition-delay: 0.3s; }
-.fade-in-right { transition-delay: 0.6s; }
-.fade-in-late-left { transition-delay: 1.2s; }
-.fade-in-late-right { transition-delay: 1.5s; }
-
-.fade-out-left,
-.fade-out-center,
-.fade-out-right,
-.fade-out-late-left,
-.fade-out-late-right {
-  opacity: 0;
-  transform: translateX(50px);
-}
-
-.fade-out-right { transition-delay: 0s; }
-.fade-out-center { transition-delay: 0.3s; }
-.fade-out-left { transition-delay: 0.6s; }
-.fade-out-late-right { transition-delay: 0.9s; }
-.fade-out-late-left { transition-delay: 1.2s; }
-
-/* --- Responsive --- */
 @media (max-width: 1024px) {
   .profile-list-container {
     flex-direction: column;
     align-items: center;
-    padding: 24px;
-    gap: 50px;
+    gap: 40px; /* เดิม 50px */
   }
 
   .profile-section {
     width: 100%;
-    max-width: 480px;
+    max-width: 520px; /* เดิม 480px */
     font-size: 1.1rem;
   }
 
@@ -162,14 +143,19 @@
   .bottom-row {
     flex-direction: column;
     align-items: center;
-    gap: 40px;
+    gap: 32px;           /* เดิม 40px */
     margin-top: 40px;
   }
 
   .black-box-single {
-    width: 90%;
+    width: 92%;
+    max-width: 560px;
     padding: 20px;
     font-size: 1.1rem;
   }
 }
 
+/* รองรับผู้ใช้ที่ลดอนิเมชัน */
+@media (prefers-reduced-motion: reduce) {
+  .profile-image { transition: none; }
+}
