@@ -20,7 +20,7 @@ function ProfileList() {
       <div className="profile-section center">
         <h2>About Interest</h2>
         <h5><b>Knownledge: </b>Web Development</h5>
-        <h5><b>Recovery: </b>Playing sport ex. running and swimming and Sleeping</h5>
+        <h5><b>Recovery: </b>Playing sport ex. running and swimming and sleeping</h5>
         <h5><b>See around: </b>Watching news</h5>
         <img
           src="https://www.bankrate.com/2022/02/31124942/Deposits_What_is_interest.jpg?auto=webp&optimize=high&crop=16:9"
