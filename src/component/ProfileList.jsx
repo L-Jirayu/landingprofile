@@ -7,9 +7,9 @@ function ProfileList() {
       {/* กลุ่มบน */}
       <div className="profile-section left">
         <h2>Other Skill</h2>
-        <p><b>Study: </b>Everything about Algebra Calculation</p>
-        <p><b>Motocycle: </b>Basic service ex. engine oil change</p>
-        <p><b>Location: </b>Can know the places around my area</p>
+        <h5><b>Study: </b>Everything about Algebra Calculation</h5>
+        <h5><b>Motocycle: </b>Basic service ex. engine oil change</h5>
+        <h5><b>Location: </b>Can know the places around my area</h5>
         <img
           src="https://info.stonewallco.com/hubfs/Professional%20Engineer.png"
           alt="OtherSkill"
@@ -19,9 +19,9 @@ function ProfileList() {
 
       <div className="profile-section center">
         <h2>About Interest</h2>
-        <p><b>Knownledge: </b>Web Development</p>
-        <p><b>Recovery: </b>Playing Sport ex, running and swimming</p>
-        <p><b>See around: </b>Watching news</p>
+        <h5><b>Knownledge: </b>Web Development</h5>
+        <h5><b>Recovery: </b>Playing sport ex. running and swimming and Sleeping</h5>
+        <h5><b>See around: </b>Watching news</h5>
         <img
           src="https://www.bankrate.com/2022/02/31124942/Deposits_What_is_interest.jpg?auto=webp&optimize=high&crop=16:9"
           alt="Interest"
@@ -31,9 +31,9 @@ function ProfileList() {
 
       <div className="profile-section right">
         <h2>Learning Experience</h2>
-        <p><b>Programming Language: </b>C, Python</p>
-        <p><b>Backend: </b>MySQL, ASP .Net MVC</p>
-        <p><b>Computer Knowledge: </b>Data Structure and Algorithm, Introduction of Software Engineering</p>
+        <h5><b>Programming Language: </b>C, Python</h5>
+        <h5><b>Backend: </b>MySQL, ASP .Net MVC</h5>
+        <h5><b>Computer Knowledge: </b>Data Structure and Algorithm, Introduction of Software Engineering</h5>
         <img
           src="https://res.cloudinary.com/emg-prod/image/upload/f_auto,q_auto/v1/htmlpages/htmlpage22655/computerskillsopengraph.jpg"
           alt="ComSkill"
