@@ -10,7 +10,8 @@ function Structure() {
         <div className="structure-text">
           <h1>Welcome to My Profile</h1>
           <h2>ยินดีต้อนรับเข้าสู่โปรไฟล์ของฉัน</h2>
-          <h3>(Living my life)</h3>
+          
+          <h1><a href='https://github.com/l-jirayu'>My Github</a></h1>
           <div className="structure-icons">
             <FaEarthAsia size={64} />
             <FaDev size={64} />

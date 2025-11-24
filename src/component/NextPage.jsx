@@ -7,9 +7,7 @@ function NextPage() {
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        setShow(entry.isIntersecting);
-      },
+      ([entry]) => setShow(entry.isIntersecting),
       { threshold: 0.1 }
     );
 
@@ -22,10 +20,15 @@ function NextPage() {
   return (
     <div className="profile-container page-gray" ref={containerRef}>
 
-      {/* About Me: รูปซ้าย กล่องขวา */}
+      {/* About Me */}
       <div className={`profile-row ${show ? 'fade-in' : 'fade-out'}`}>
-        <img src="https://img2.pic.in.th/pic/IMG_20250102_082913.md.jpg" alt="About Me" className="profile-pic" />
-        <div className="profile-box">
+        <img
+          src="https://img2.pic.in.th/pic/IMG_20250102_082913.md.jpg"
+          alt="About Me"
+          className="profile-pic"
+        />
+
+        <div className="profile-section-wide">
           <h2>About Me</h2>
           <p><b>Name:</b> Mr. Jirayu Langphee</p>
           <p><b>Nickname:</b> Guy</p>
@@ -34,20 +37,25 @@ function NextPage() {
         </div>
       </div>
 
-      {/* Hobbies: กล่องซ้าย รูปขวา */}
+      {/* Tech Stack */}
       <div className={`profile-row ${show ? 'fade-in delay-1' : 'fade-out'}`}>
-        <div className="profile-box">
-          <h2>Hobbies</h2>
-          <p><b>Entertainment:</b> Games, Music, Movies</p>
-          <p><b>Relax:</b> Sleeping, Watch Comedy</p>
-          <p><b>Study:</b> Studying knowledge about computer technology</p>
+        <div className="profile-section-wide">
+          <h2>Tech Stack</h2>
+          <p><b>Frontend:</b> React, VanillaJS</p>
+          <p><b>Backend:</b> Express, NestJS, PHP, Laravel, RestAPI, gRPC</p>
+          <p><b>Database:</b> MongoDB, PostgreSQL, MySQL, phpmyadmin</p>
+          <p><b>Environment:</b> XAMPP, Docker, NodeJS, Composer</p>
         </div>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3JEtM5r-4KY3aKg7Omx5BnvEKAga2Vuu45g&s" alt="Hobbies" className="profile-pic" />
-      </div>
-    </div>
 
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3JEtM5r-4KY3aKg7Omx5BnvEKAga2Vuu45g&s"
+          alt="Hobbies"
+          className="profile-pic"
+        />
+      </div>
+
+    </div>
   );
 }
 
 export default NextPage;
-
