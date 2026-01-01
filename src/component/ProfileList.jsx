@@ -62,8 +62,8 @@ function ProfileList() {
         <h2>PHP Stack</h2>
 
         <b>Docker, Composer, Laravel, PostgreSQL</b> 
-        <p><b>People Management: </b><a href = "https://github.com/L-Jirayu/mini-e-commerse">Click!</a></p>
-        <p><b>Mini E-Commerse: </b><a href = "https://github.com/L-Jirayu/people-management-laravel">Click!</a></p>
+        <p><b>People Management: </b><a href = "https://github.com/L-Jirayu/people-management-laravel">Click!</a></p>
+        <p><b>Mini E-Commerse: </b><a href = "https://github.com/L-Jirayu/mini-e-commerse">Click!</a></p>
 
         <img
           src="https://www.bankrate.com/2022/02/31124942/Deposits_What_is_interest.jpg?auto=webp&optimize=high&crop=16:9"
